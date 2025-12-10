@@ -54,19 +54,20 @@ Loop until the summary length meets a given limit
 Everything is rule-based — no ML models required.
 
 API Endpoints:
+
 POST /graph/create
 
-Create a workflow by providing a JSON description of nodes and edges.
-Returns a graph_id.
+  Create a workflow by providing a JSON description of nodes and edges.
+  Returns a graph_id.
 
 POST /graph/run
 
-Run an existing workflow using an initial state.
-Returns the run_id, final state, and execution log.
+  Run an existing workflow using an initial state.
+  Returns the run_id, final state, and execution log.
 
 GET /graph/state/{run_id}
 
-Retrieve the stored state of a completed workflow run.
+  Retrieve the stored state of a completed workflow run.
 
 Swagger UI is available at:
 
@@ -74,15 +75,20 @@ http://127.0.0.1:8000/docs
 
 How to Run the Project:
 1. Setup environment
-python -m venv .venv
-.\.venv\Scripts\activate
-pip install -r requirements.txt
+
+   python -m venv .venv
+
+   .\.venv\Scripts\activate
+
+   pip install -r requirements.txt
 
 2. Start the server
-uvicorn app.main:app --reload
+
+   uvicorn app.main:app --reload
 
 3. Open the API docs
-http://127.0.0.1:8000/docs
+
+   http://127.0.0.1:8000/docs
 
 
 Use the interactive docs to create workflows, run them, and inspect results.
