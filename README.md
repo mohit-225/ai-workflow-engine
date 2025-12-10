@@ -5,6 +5,7 @@ This project was developed as part of an AI Engineering backend assignment to de
 
 The engine runs entirely in memory and focuses on clarity, structure, and correctness. A simple text-summarization workflow is included to illustrate how the engine behaves in a real flow.
 
+
 Features:
 
 Define workflows using plain Python functions (nodes)
@@ -23,6 +24,7 @@ Execution logs for debugging
 
 In-memory graph and run storage
 
+
 Project Structure:
 
 app/
@@ -36,6 +38,7 @@ app/
 ├── tools.py                    # Optional tool registry
 
 └── __init__.py
+
 
 Example Workflow: Text Summarization
 
@@ -53,6 +56,7 @@ Loop until the summary length meets a given limit
 
 Everything is rule-based — no ML models required.
 
+
 API Endpoints:
 
 POST /graph/create
@@ -69,9 +73,11 @@ GET /graph/state/{run_id}
 
   Retrieve the stored state of a completed workflow run.
 
+
 Swagger UI is available at:
 
 http://127.0.0.1:8000/docs
+
 
 How to Run the Project:
 1. Setup environment
@@ -93,6 +99,7 @@ How to Run the Project:
 
 Use the interactive docs to create workflows, run them, and inspect results.
 
+
 How It Works (Short Overview):
 
 Each node is a simple Python function that reads and modifies a shared state dict
@@ -107,6 +114,7 @@ Graphs and runs are stored in memory for simplicity
 
 The design keeps things small and approachable while still showing essential backend concepts.
 
+
 Possible Improvements:
 
 If extended further, the project could include:
@@ -120,6 +128,7 @@ Async support for long-running nodes
 UI for visualizing workflow graphs
 
 Better error handling and validation
+
 
 Why This Approach:
 
